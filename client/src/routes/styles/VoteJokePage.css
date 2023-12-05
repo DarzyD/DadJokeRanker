@@ -1,0 +1,52 @@
+.card{
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+.downvoteBtn {
+    background-color: #d32828; 
+    border-color: #d32828; 
+    color: #fff; 
+}
+.downvoteBtn:hover {
+    background-color: #a10202; 
+    border-color: #a10202; 
+    color: #fff; 
+}
+.downvoteBtn:active {
+    background-color: #a10202; 
+    border-color: #a10202; 
+    color: #fff; 
+}
+.skipBtn {
+    background-color: #878181; 
+    border-color: #878181; 
+    color: #fff; 
+}
+.skipBtn:hover {
+    background-color: #363535; 
+    border-color: #363535; 
+    color: #fff; 
+}
+.skipBtn:active {
+    background-color: #363535; 
+    border-color: #363535; 
+    color: #fff; 
+}
+
+.upvoteBtn {
+    background-color: #1e7e34; 
+    border-color: #1e7e34; 
+    color: #fff; 
+}
+.upvoteBtn:hover {
+    background-color: #155424; 
+    border-color: #155424; 
+    color: #fff; 
+}
+.upvoteBtn:active {
+    background-color: #155424; 
+    border-color: #155424; 
+    color: #fff; 
+}

@@ -1,0 +1,9 @@
+a{
+    padding: 1%;
+    margin:1%;
+}
+ a:hover {
+    background-color: #4c4f53; 
+    transition: box-shadow 1s;
+    color: #fff; 
+}

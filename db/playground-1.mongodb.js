@@ -1,0 +1,1040 @@
+const database = 'dadJokeDB';
+const collections = ['joke','comments'];
+use(database);
+collections.forEach(collection => {
+    if(!db[collection]) {
+        db.createCollection(collection);
+    }else{
+        db[collection].drop();
+    }   
+});
+
+db.joke.insertMany([
+            {
+              "id": "NucUfVvXLBd",
+              "joke": "What did the hat say to the scarf?\r\nYou can hang around. I'll just go on ahead.\r\n",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "i39hqWnGljb",
+              "joke": "When Dad drops a pea off of his plate \u2018oh dear I\u2019ve pee\u2019d on the table!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "lqWgFlyPusc",
+              "joke": "What do you call an Argentinian with a rubber toe? Roberto",
+              "upvotes": 0,
+              "downvotes": -10
+            },
+            {
+              "id": "fNeVDI6USnb",
+              "joke": "I made a playlist for hiking. It has music from Peanuts, The Cranberries, and Eminem. I call it my Trail Mix.",
+              "upvotes": 10,
+              "downvotes": 0
+            },
+            {
+              "id": "DIeaUDlbUDd",
+              "joke": "\u201cMy Dog has no nose.\u201d \u201cHow does he smell?\u201d \u201cAwful\u201d",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "PC5TCQuXnrc",
+              "joke": "Where do you learn to make banana splits? At sundae school.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "DAskq4oWSvc",
+              "joke": "I was just looking at my ceiling. Not sure if it\u2019s the best ceiling in the world, but it\u2019s definitely up there.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "GYDY8xXLmyd",
+              "joke": "Why did the girl smear peanut butter on the road? To go with the traffic jam.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "LBAQ79MJmb",
+              "joke": "What\u2019s the difference between an African elephant and an Indian elephant? About 5000 miles.",
+              "upvotes": 3,
+              "downvotes": 0
+            },
+            {
+              "id": "1T0gqOZT0g",
+              "joke": "I thought my wife was joking when she said she'd leave me if I didn't stop signing \"I'm A Believer\"... Then I saw her face.",
+              "upvotes": 0,
+              "downvotes": -7
+            },
+            {
+              "id": "2gFIBX82Etc",
+              "joke": "Do I enjoy making courthouse puns? Guilty",
+              "upvotes": 0,
+              "downvotes": -3
+            },
+            {
+              "id": "1Dt4M7Ufaxc",
+              "joke": "Slept like a log last night \u2026 woke up in the fireplace.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "lyPZgVn3Le",
+              "joke": "What did the ocean say to the shore? Nothing, it just waved.",
+              "upvotes": 3,
+              "downvotes": 0
+            },
+            {
+              "id": "eNJm3Tfaxc",
+              "joke": "People are shocked to discover I have a police record but I love their greatest hits!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "Im31ozkVnjb",
+              "joke": "A boy dug three holes in the yard. When his mother saw, she exclaimed: \"well, well, well\"",
+              "upvotes": 3,
+              "downvotes": 0
+            },
+            {
+              "id": "ZgahF6MZDd",
+              "joke": "Where does astronauts hangout after work? At the spacebar.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "V0wkbprcprc",
+              "joke": "If you want a job in the moisturizer industry, the best advice I can give is to apply daily.",
+              "upvotes": 2,
+              "downvotes": 0
+            },
+            {
+              "id": "Me2wAAl31wc",
+              "joke": "Velcro\u2026 What a rip-off.",
+              "upvotes": 0,
+              "downvotes": -3
+            },
+            {
+              "id": "HBszX8MJ6h",
+              "joke": "I was so proud when I finished the puzzle in six months, when on the side it said three to four years.",
+              "upvotes": 2,
+              "downvotes": 0
+            },
+            {
+              "id": "HYoGYTvX0g",
+              "joke": "What is the tallest building in the world? The library \u2013 it\u2019s got the most stories!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "LRnGeVfiNe",
+              "joke": "Today a man knocked on my door and asked for a small donation towards the local swimming pool. I gave him a glass of water.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "9hydxXgiiqc",
+              "joke": "My wife said I was immature. So I told her to get out of my fort.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "1gyI6EIRKBd",
+              "joke": "What do you call two barracuda fish?  A Pairacuda!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "bxXLeqzP7wc",
+              "joke": "Americans can't switch from pounds to kilograms overnight. That would cause mass confusion.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "jNCtkyIeNuc",
+              "joke": "I broke my finger at work today, on the other hand I'm completely fine.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "189xHQ7pOuc",
+              "joke": "What creature is smarter than a talking parrot? A spelling bee.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "X8pWSKJRZg",
+              "joke": "What does a clock do when it's hungry? It goes back four seconds!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "W82EtW01wkb",
+              "joke": "What happens when you anger a brain surgeon? They will give you a piece of your mind.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "BsHtcN7hiqc",
+              "joke": "What do you give a sick lemon? Lemonaid.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "prWLBszsWDd",
+              "joke": "The shovel was a ground-breaking invention.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AI6hiGtzAd",
+              "joke": "Where do bees go to the bathroom?  The BP station.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "6hqHJmyPmyd",
+              "joke": "What kind of music do mummy's like? Rap",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "G6EtkOZD5h",
+              "joke": "Why can't you use \"Beef stew\" as a password? Because it's not stroganoff.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "6hy5EQCtHtc",
+              "joke": "I remember when I was a kid, I opened my fridge and noticed one of my vegetables were crying. I guess I have some emotional cabbage.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "jNmykbUSSvc",
+              "joke": "I went to a book store and asked the saleswoman where the Self Help section was, she said if she told me it would defeat the purpose.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "RC51wcNRClb",
+              "joke": "Two dyslexics walk into a bra.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "o4MexXSClb",
+              "joke": "What did the judge say to the dentist? Do you swear to pull the tooth, the whole tooth and nothing but the tooth?",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "PucUvXSvkqc",
+              "joke": "Why did the fireman wear red, white, and blue suspenders? To hold his pants up.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "8pWvzkjN7Ed",
+              "joke": "Two muffins were sitting in an oven, and the first looks over to the second, and says, \u201cman, it\u2019s really hot in here\u201d. The second looks over at the first with a surprised look, and answers, \u201cWHOA, a talking muffin!\u201d",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "scaUn3TfNe",
+              "joke": "So, I heard this pun about cows, but it\u2019s kinda offensive so I won\u2019t say it. I don\u2019t want there to be any beef between us. ",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "tkji39992Ed",
+              "joke": "What biscuit does a short person like? Shortbread. ",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ap4orcpGtrc",
+              "joke": "A man walks into a bar and orders helicopter flavor chips. The barman replies \u201csorry mate we only do plain\u201d",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "V0orcFdFIBd",
+              "joke": "What do you do when you see a space man?\r\nPark your car, man.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "hiVSCdUvXg",
+              "joke": "I heard there was a new store called Moderation. They have everything there",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "JeaxXvkyPf",
+              "joke": "Can February march? No, but April may.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "hNu4oORnOmb",
+              "joke": "What do you call cheese by itself? Provolone.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "Elb2wkbx5wc",
+              "joke": "Scientists finally did a study on forks. It's about tine!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "TS0gFlqr4ob",
+              "joke": "What do you call a group of disorganized cats? A cat-tastrophe.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "qjyszskjNCd",
+              "joke": "Wife told me to take the spider out instead of killing it... We had some drinks, cool guy, wants to be a web developer.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "mGlbFtk3Tvc",
+              "joke": "Why did the m&m go to school? Because it wanted to be a Smartie!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "LucahqjGQuc",
+              "joke": "Why did the clown have neck pain? - Because he slept funny",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "FBQK6MexPuc",
+              "joke": "My friend told me that pepper is the best seasoning for a roast, but I took it with a grain of salt.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "VfFlGJmOmb",
+              "joke": "People saying 'boo! to their friends has risen by 85% in the last year.... That's a frightening statistic.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "jbU0LmyPKBd",
+              "joke": "What has ears but cannot hear? A field of corn.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ozsPmORZvzd",
+              "joke": "A bartender broke up with her boyfriend, but he kept asking her for another shot.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ozPf21LJJtc",
+              "joke": "Where does batman go to the bathroom? The batroom.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "WvsHlyszkyd",
+              "joke": "Why did the man put his money in the freezer? He wanted cold hard cash!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "2gaMZLBszsc",
+              "joke": "Why did the kid throw the clock out the window? He wanted to see time fly!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "KZLBXvPZDd",
+              "joke": "What did the sea say to the sand? \"We have to stop meeting like this.\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "trjG61Dlqzd",
+              "joke": "Why was Santa's little helper feeling depressed? Because he has low elf esteem.\n",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "J69x5hNZvzd",
+              "joke": "I don't trust sushi, there's something fishy about it.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "p4oWvPClVnb",
+              "joke": "What do you call a cow on a trampoline? A milk shake!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "cpWnWg3TKmb",
+              "joke": "Two silk worms had a race. They ended up in a tie.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "XgVnOK6USnb",
+              "joke": "You know that cemetery up the road? People are dying to get in there.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "EBQfiyXD5ob",
+              "joke": "what do you call a dog that can do magic tricks? a labracadabrador",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "y59pGlbhyAd",
+              "joke": "I really want to buy one of those supermarket checkout dividers, but the cashier keeps putting it back.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AljqO7hFBd",
+              "joke": "A farmer had 297 cows, when he rounded them up, he found he had 300",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AsrrcprjNCd",
+              "joke": "What concert costs only 45 cents? 50 cent featuring Nickelback.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "aaUKeahqWvc",
+              "joke": "This is my step ladder. I never knew my real ladder.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "axPR79MZvc",
+              "joke": "What did the fish say when it swam into a wall? Damn!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "pzkbpORS7wc",
+              "joke": "Parallel lines have so much in common. It\u2019s a shame they\u2019ll never meet.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "S0TvXvzPfFd",
+              "joke": "A man was caught stealing in a supermarket today while balanced on the shoulders of a couple of vampires. He was charged with shoplifting on two counts. ",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "7hNuz5MeVnb",
+              "joke": "What kind of dinosaur loves to sleep? A stega-snore-us.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "gNZTCQnWSf",
+              "joke": "The other day I was listening to a song about superglue, it\u2019s been stuck in my head ever since.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "pWLRK6pWDtc",
+              "joke": "What do you call a boomerang that won't come back? A stick.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "szItcaFQnjb",
+              "joke": "Why was the broom late for the meeting? He overswept.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "Tv4wkVS0gib",
+              "joke": "Where do owls go to buy their baby clothes? The owlet malls.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "F6M7ElOZTvc",
+              "joke": "what happens when you cross a sheep with a kangaroo ? A woolly jumper!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "iV0DQ7pjGlb",
+              "joke": "I had a dream that I was a muffler last night. I woke up exhausted!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "haahVKZDtrc",
+              "joke": "What's red and bad for your teeth? A Brick.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "82wAAI6pbh",
+              "joke": "How many tickles does it take to tickle an octopus? Ten-tickles!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "6wXLeVDQukb",
+              "joke": "Frankenstein enters a bodybuilding competition and finds he has seriously misunderstood the objective.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "vk31LJB5Elb",
+              "joke": "Why didn\u2019t the orange win the race? It ran out of juice.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "cxcpGeiyAd",
+              "joke": "I went to the doctor today and he told me I had type A blood but it was a type O.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "QuscibaMClb",
+              "joke": "What does a pirate pay for his corn? A buccaneer!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "diGeqOfiqc",
+              "joke": "What\u2019s E.T. short for? He\u2019s only got little legs.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "cxHYg3gFQf",
+              "joke": "I got fired from the transmission factor, turns out I didn't put on enough shifts...",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "pWn31TCQ7pb",
+              "joke": "What do you call a duck that gets all A's? A wise quacker.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "scUvsrORKe",
+              "joke": "I asked a frenchman if he played video games. He said \"Wii\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "W0ga21DdUvc",
+              "joke": "The urge to sing the Lion King song is just a whim away.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "7MRuzIYgaFd",
+              "joke": "If a child refuses to sleep during nap time, are they guilty of resisting a rest?",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "DImrciqWSCd",
+              "joke": "What do you call a cow with no legs? Ground beef.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "IYT082EQukb",
+              "joke": "Why was ten scared of seven? Because seven ate nine.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "OmOfqW821Dd",
+              "joke": "What did Yoda say when he saw himself in 4K? \"HDMI\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "obhFBljb2g",
+              "joke": "I adopted my dog from a blacksmith. As soon as we got home he made a bolt for the door.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "gNRnWvzdiib",
+              "joke": "Sgt.: Commissar! Commissar! The troops are revolting! Commissar: Well, you\u2019re pretty repulsive yourself.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ukOCYoWDQuc",
+              "joke": "My sea sickness comes in waves.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "WgV0T0wk3ob",
+              "joke": "Q: What did the spaghetti say to the other spaghetti?\r\nA: Pasta la vista, baby!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "fNZTCdFBImb",
+              "joke": "Why did the house go to the doctor? It was having window panes.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "cNRZTfFtrjb",
+              "joke": "A man got hit in the head with a can of Coke, but he was alright because it was a soft drink.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "FtkqcFtrWvc",
+              "joke": "I boiled a funny bone last night and had a laughing stock",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "h39UfibMJBd",
+              "joke": "Did you hear about the cheese who saved the world? It was Legend-dairy!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "BdxHQZ0TCd",
+              "joke": "Can a kangaroo jump higher than the Empire State Building? Of course. The Empire State Building can't jump.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AAXnyImyPCd",
+              "joke": "Don't trust atoms. They make up everything.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "HeaFdiyIJe",
+              "joke": "What kind of magic do cows believe in? MOODOO.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "0ga2wsPZgib",
+              "joke": "\"Why do seagulls fly over the ocean?\" \"Because if they flew over the bay, we'd call them bagels.\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "99MZvHJJtzd",
+              "joke": "Why don't sharks eat clowns?  Because they taste funny.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AsHQSSKeapb",
+              "joke": "I\u2019ve got this disease where I can\u2019t stop making airport puns. The doctor says it terminal.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "YLm39E6pjqc",
+              "joke": "What do vegetarian zombies eat? Grrrrrainnnnnssss.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "FdN7wcxAskb",
+              "joke": "They're making a movie about clocks. It's about time",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "VvP7U0D5TCd",
+              "joke": "I was at the library and asked if they have any books on \"paranoia\", the librarian replied, \"yes, they are right behind you\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "nWvcUD5orrc",
+              "joke": "I asked the surgeon if I could administer my own anesthetic, they said: go ahead, knock yourself out.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "n3o4orjiysc",
+              "joke": "Why are skeletons so calm? Because nothing gets under their skin.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "Y0LZ0Ddxcib",
+              "joke": "What is worse then finding a worm in your Apple? Finding half a worm in your Apple.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "cUvsHt41gFd",
+              "joke": "A man walked in to a bar with some asphalt on his arm. He said \u201cTwo beers please, one for me and one for the road.\u201d",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "MZvsrzXgyd",
+              "joke": "I used to think I was indecisive, but now I'm not sure.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "PfaMusPucFd",
+              "joke": "What do you do when your bunny gets wet? You get your hare dryer.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "aMmbaFYTKBd",
+              "joke": "I finally bought the limited edition Thesaurus that I've always wanted. When I opened it, all the pages were blank.\r\nI have no words to describe how angry I am.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "PuskbxcpWnb",
+              "joke": "In the news a courtroom artist was arrested today, I'm not surprised, he always seemed sketchy.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "i31LeNRuzAd",
+              "joke": "Why did the chicken get a penalty? For fowl play.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "BQfaxsHBsrc",
+              "joke": "What do you call a pile of cats?  A Meowtain.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "BAscNus4ozd",
+              "joke": "Two parrots are sitting on a perch. One turns to the other and asks, \"do you smell fish?\"",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "It4Etrjiqrc",
+              "joke": "Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "9xPCt411ojb",
+              "joke": "What did one snowman say to the other snow man? Do you smell carrot?",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "S7wHQKJe2wc",
+              "joke": "How are false teeth like stars? They come out at night!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "DtcaMmWDImb",
+              "joke": "Why did Dracula lie in the wrong coffin? He made a grave mistake.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "JBAQCl392ob",
+              "joke": "New atoms frequently lose electrons when they fail to keep an ion them.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "NCAIYLeNe",
+              "joke": "I fear for the calendar, its days are numbered.\n",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "5EBlOKBQSvc",
+              "joke": "Why did the banana go to the doctor? He was not \"peeling\" well.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "tHJtrrzP7wc",
+              "joke": "Mahatma Gandhi, as you know, walked barefoot most of the time, which produced an impressive set of calluses on his feet. \r\nHe also ate very little, which made him rather frail and with his odd diet, he suffered from bad breath. \r\nThis made him a super calloused fragile mystic hexed by halitosis.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "rjiyXLZTSf",
+              "joke": "What did the 0 say to the 8? Nice belt.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "HlbFQ71wkyd",
+              "joke": "I just broke my guitar. It's okay, I won't fret",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ea2wkyscah",
+              "joke": "What does an angry pepper do? It gets jalape\u00f1o face.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "dprjbhyAAAd",
+              "joke": "A Sandwich walks into a bar, the bartender says \u201cSorry, we don\u2019t serve food here\u201d",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "KJmW8h3oWnb",
+              "joke": "Did you hear about the scientist who was lab partners with a pot of boiling water? He had a very esteemed colleague.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "HQZorO7pWnb",
+              "joke": "Coffee has a tough time at my house, every morning it gets mugged.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "M7EBXgVSCAd",
+              "joke": "A weasel walks into a bar. The bartender says, \"Wow, I've never served a weasel before. What can I get for you?\"\r\n\"Pop,\" goes the weasel.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "AXnrrcNmyAd",
+              "joke": "Why do bananas have to put on sunscreen before they go to the beach? Because they might peel!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "ucxPZDAlGlb",
+              "joke": "If two vegans are having an argument, is it still considered beef?",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "VnysHtWvkqc",
+              "joke": "Geology rocks, but Geography is where it's at!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "SSCQCdi39Ed",
+              "joke": "Did you hear about the cheese factory that exploded in France? There was nothing left but de Brie.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "3oG6UvX82g",
+              "joke": "Which is the fastest growing city in the world? Dublin'",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "NCQfqHYgaFd",
+              "joke": "I'm glad I know sign language, it's pretty handy.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "eqcpOf2EImb",
+              "joke": "To the person who stole my anti-depressant pills: I hope you're happy now.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "3El3TCYDYob",
+              "joke": "Conjunctivitis.com \u2013 now that\u2019s a site for sore eyes.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "XDImr41obh",
+              "joke": "I bought shoes from a drug dealer once. I don't know what he laced them with, but I was tripping all day.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "xXgyXvXgFlb",
+              "joke": "Doctor you've got to help me, I'm addicted to Twitter. Doctor: I don't follow you.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "X01T0DQKuzd",
+              "joke": "I decided to sell my Hoover\u2026 well it was just collecting dust.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "dp4Tfqciiib",
+              "joke": "Got a new suit recently made entirely of living plants. I wasn\u2019t sure at first, but it\u2019s grown on me",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "mO7hqWvsPCd",
+              "joke": "My wife is on a tropical fruit diet, the house is full of stuff. It is enough to make a mango crazy.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "vX8MeFdUDlb",
+              "joke": "Dad died because he couldn't remember his blood type. I will never forget his last words. Be positive.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "5hNJexX8prc",
+              "joke": "How do you fix a damaged jack-o-lantern? You use a pumpkin patch.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "uszdNZ8MRCd",
+              "joke": "My new thesaurus is terrible. In fact, it's so bad, I'd say it's terrible.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "exH6pOuzXDd",
+              "joke": "How do you get a baby alien to sleep?  You rocket.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "fiydpr4EQnb",
+              "joke": "What\u2019s brown and sounds like a bell? Dung!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "skGtHlORfFd",
+              "joke": "What kind of music do planets listen to? Nep-tunes.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "UfiGljVKusc",
+              "joke": "Why was the strawberry sad? Its parents were in a jam.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "DQ7MZLZoWnb",
+              "joke": "Why are snake races so exciting? They're always neck and neck.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "PRZ8xHtcprc",
+              "joke": "Nurse: Doctor, there's a patient that says he's invisible. Doctor: Well, tell him I can't see him right now!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "8U8EdpWnOuc",
+              "joke": "Recent survey revealed 6 out of 7 dwarf's aren't happy.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "FQfxk39EBd",
+              "joke": "I asked my date to go to the gym the other day. They never showed up. That's when I knew we wouldn't work out.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "4MmjbFlbah",
+              "joke": "I cut my finger chopping cheese, but I think that I may have grater problems.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "nrrj3TfFdxc",
+              "joke": "Why did the octopus beat the shark in a fight? Because it was well armed.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "dpWvHtW0Tnb",
+              "joke": "What's orange and sounds like a parrot? A Carrot.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "89MZLmWnWvc",
+              "joke": "I can't take my dog to the pond anymore because the ducks keep attacking him. That's what I get for buying a pure bread dog.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "DtWSnydN7h",
+              "joke": "It's difficult to say what my wife does, she sells sea shells by the sea shore.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "KBsrz5ws4Ed",
+              "joke": "Why are fish easy to weigh? Because they have their own scales.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "2gii3LeN7Ed",
+              "joke": "Why couldn't the kid see the pirate movie? Because it was rated arrr!",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "NRZTSnykqjb",
+              "joke": "Where do you take someone who\u2019s been injured in a peek-a-boo accident? To the I.C.U.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "USnOZoORusc",
+              "joke": "The Swiss must've been pretty confident in their chances of victory if they included a corkscrew in their army knife.",
+              "upvotes": 0,
+              "downvotes": 0
+            },
+            {
+              "id": "JeF69xAQSnb",
+              "joke": "A red and a blue ship have just collided in the Caribbean. Apparently the survivors are marooned.",
+              "upvotes": 0,
+              "downvotes": 0
+            }
+]);
+
